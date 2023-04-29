@@ -1,0 +1,38 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   align-content: center;
+   animation: animation-background 500ms ease-out;
+}
+
+@keyframes animation-background {
+}
+main {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   height: 150px;
+   border: 3px solid rgb(108, 99, 99);
+   background-color: white;
+   margin: 0 auto;
+   top: 250px;
+   position: relative;
+   display: flex;
+}
+
+.iniciar,
+.tutorial,
+.sair {
+   font-size: 30px;
+   margin: 4px;
+}
+
+button:hover {
+   color: blue;
+}
