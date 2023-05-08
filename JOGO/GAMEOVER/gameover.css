@@ -1,0 +1,20 @@
+#txt-GO {
+   font-size: 80px;
+   background-color: orange;
+   color: aliceblue;
+   border-radius: 300px;
+}
+
+#btn-menu {
+   padding: 20px;
+   color: rgb(0, 255, 0);
+   background-color: rgb(57, 57, 102);
+   position: absolute;
+   top: 300px;
+   left: 650px;
+   border-radius: 300px;
+}
+
+#btn-menu:hover {
+   background-color: black;
+}

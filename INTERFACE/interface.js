@@ -6,11 +6,14 @@ btns.forEach(function (btn) {
       const styles = e.currentTarget.classList;
       console.log(styles);
       if (styles.contains("iniciar")) {
-         window.open("html/jogo.html", "_self");
+         window.open("../JOGO/FASE1/jogo.html", "_self");
       } else if (styles.contains("tutorial")) {
-         window.open("html/tutorial.html", "_self");
+         window.open("../TUTORIAL/tutorial.html", "_self");
       } else if (styles.contains("sair")) {
-         window.close();
+         const minhaJanela = window.open(
+            "../ENCERRAMENTO/fechar.html",
+            "_self"
+         );
       }
    });
 });

@@ -1,0 +1,57 @@
+body {
+   background-color: rgb(28, 71, 82);
+}
+
+p {
+   font-size: 20px;
+}
+
+#tutorial-mov {
+   background-color: rgb(51, 43, 81);
+   position: relative;
+   padding: 30px;
+   margin: 2px;
+   width: 500px;
+   height: 270px;
+   border-radius: 100px;
+}
+
+#tutorial-mov p {
+   position: relative;
+   top: 20px;
+   font-family: cursive;
+   color: rgb(0, 255, 0);
+}
+
+#tutorial-mov h1 {
+   color: white;
+   position: absolute;
+   left: 160px;
+   top: 0px;
+}
+
+#tutorial-elemen {
+   background-color: rgb(51, 47, 84);
+   position: absolute;
+   top: 0px;
+   right: 100px;
+   padding: 30px;
+   margin: 2px;
+   width: 700px;
+   height: 680px;
+   border-radius: 100px;
+}
+
+#tutorial-elemen p {
+   position: relative;
+   top: 20px;
+   font-family: cursive;
+   color: rgb(32, 240, 32);
+}
+
+#tutorial-elemen h1 {
+   color: white;
+   position: absolute;
+   left: 260px;
+   top: 0px;
+}
