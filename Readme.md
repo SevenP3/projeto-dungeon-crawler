@@ -22,3 +22,6 @@ O: Símbolo que representa um botão que o usuário pode interagir, o botão fic
 #: Símbolo que representa um espinho. A fase é reiniciada quando o jogador toca no espinho, caso a fase seja reiniciada três vezes, o jogo volta para o menu principal.
 
 > : Símbolo que representa um teletransporte. O teletransporte sempre deve vir em pares, quando o jogador toca em um ele é transportado para o outro e vice-versa.
+
+
+ALUNOS: Paulo Neves, Tiago Silva, Willian Brasil
