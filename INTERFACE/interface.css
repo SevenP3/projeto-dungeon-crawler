@@ -1,38 +1,68 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-body {
-   display: flex;
-   align-content: center;
-   animation: animation-background 500ms ease-out;
-}
-
-@keyframes animation-background {
-}
-main {
-   position: absolute;
-   display: flex;
-   flex-direction: column;
-   width: 25%;
-   height: 150px;
-   border: 3px solid rgb(108, 99, 99);
-   background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ body {
+    display: flex;
+    align-content: center;
+    animation: animation-background 500ms ease-out;
+ }
+ 
+ @keyframes animation-background {
+ }
+ main {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+    height: 500px;
+    border: 3px solid rgb(108, 99, 99);
+   background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1512a6ad-280b-4106-8024-5c0427aec676/dez8rhv-f5fdfb0f-7d63-460c-b0d7-d7f8a22204e4.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE1MTJhNmFkLTI4MGItNDEwNi04MDI0LTVjMDQyN2FlYzY3NlwvZGV6OHJodi1mNWZkZmIwZi03ZDYzLTQ2MGMtYjBkNy1kN2Y4YTIyMjA0ZTQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ebf1zmEKzmCFFSN3Lc-0AknyhYxwV_2dhHs2fRNrxNE);
+   background-size: cover;
    margin: 0 auto;
-   top: 250px;
-   position: relative;
-   display: flex;
-}
+    top: 50px;
+    position: relative;
+    display: flex;
+ }
+ 
+ .iniciar,
+ .tutorial,
+ .sair {
+    font-size: 35px;
+    margin: 10px;
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1e2528;
+    color: white;
+ }
+ 
+ button:hover {
+    color: #8a3f87;
+ }
 
-.iniciar,
-.tutorial,
-.sair {
-   font-size: 30px;
-   margin: 4px;
-}
+ button{
+ width: 500px;
+ justify-content: center;
 
-button:hover {
-   color: blue;
-}
+ }
+
+ .tema{
+   margin: 20px;
+   font-size: 65px;
+   color: #8a3f87;
+   text-decoration-style: double;
+
+ }
+
+ .tema:hover{
+   color: #8a3f87;
+ }
+
+ 
