@@ -1,57 +1,125 @@
-body {
-   background-color: rgb(28, 71, 82);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-p {
-   font-size: 20px;
+
+
+.imag {
+  background-image: url(https://i.pinimg.com/originals/f2/94/1f/f2941ffb60c9a8c61b85d114fff5b11c.gif);
+  background-size: cover;
+  float: left;
+  width: 310px;
+  height: 640px;
 }
 
-#tutorial-mov {
-   background-color: rgb(51, 43, 81);
+.conteudo {
+  padding: 10px;
+  float: left;
+  width: 890px;
+}
+
+main {
+  width: 1200px;
+  height: 800px;
+}
+
+.conteudo {
+  float: right;
+  background-color: #555;
+  color: #fff;
+}
+
+.tuto-jogo{
+   padding: 5px;
+   border-radius: 10px;
+   font-size: 35px;
+   background-color: #8a3f87;
+
+}
+
+h2{
+   padding: 10px;
+}
+
+
+.popup {
    position: relative;
-   padding: 30px;
-   margin: 2px;
-   width: 500px;
-   height: 270px;
-   border-radius: 100px;
-}
+   display: inline-block;
+   cursor: pointer;
+   padding: 10px;
+   background-color: #555;
+   width: 890px;
+   height: 58px;
+ }
 
-#tutorial-mov p {
-   position: relative;
-   top: 20px;
-   font-family: cursive;
-   color: rgb(0, 255, 0);
-}
+ .popup h3{
+   background-color: #8a3f87;
+   width: 150px;
+   text-align: center;
+   padding: 2px;
+   border-radius: 10px;
+   color: #fff;
 
-#tutorial-mov h1 {
-   color: white;
+ }
+ 
+ .popup .popuptext {
+   visibility: hidden;
+   width: 1000px;
+   background-color: #555;
+   color: #fff;
+   justify-content: center;
+   text-align: justify;
+   border-radius: 6px;
+   padding: 8px ;
    position: absolute;
-   left: 160px;
-   top: 0px;
-}
-
-#tutorial-elemen {
-   background-color: rgb(51, 47, 84);
+   z-index: 1;
+   bottom: 125%;
+   left: 0px;
+   margin-left: -80px;
+ }
+ 
+ .popup .popuptext::after {
+   content: "";
    position: absolute;
-   top: 0px;
-   right: 100px;
-   padding: 30px;
-   margin: 2px;
-   width: 700px;
-   height: 680px;
-   border-radius: 100px;
-}
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #555 transparent transparent transparent;
+ }
+ 
+ .popup .show {
+   visibility: visible;
+   -webkit-animation: fadeIn 1s;
+   animation: fadeIn 1s
+ }
+ 
+ @-webkit-keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity: 1;}
+ }
+ 
+ @keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity:1 ;}
+ }
 
-#tutorial-elemen p {
-   position: relative;
-   top: 20px;
-   font-family: cursive;
-   color: rgb(32, 240, 32);
-}
+ .foot{
+   width: 1417px;
+   height: 170px;
+ }
 
-#tutorial-elemen h1 {
-   color: white;
-   position: absolute;
-   left: 260px;
-   top: 0px;
-}
+
+ .pix{
+   width: 200px;
+   height: 150px;
+   background-size: cover;
+   float: right;
+
+   background-image: url(https://preview.redd.it/2hpnvwaas4t21.png?auto=webp&s=010ae477236e1b40f27b0323758a490a4fc79d39);
+ }
+
