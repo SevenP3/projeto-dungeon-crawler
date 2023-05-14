@@ -1,36 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="tutorial.css">
-</head>
-<body>
+    <link rel="stylesheet" href="tutorial.css" />
+  </head>
+  <body>
+    <div class="imag"></div>
     <main>
-        <div>
-            <div id="tutorial-mov">
-                <h1>CONTROLES</h1>
-<p>W: O jogador movimenta uma unidade para cima</p>
-<p>A: O jogador movimenta uma unidade para esquerda</p>
-<p>S: O jogador movimenta uma unidade para baixo</p>
-<p>D: O jogador movimenta uma unidade para direita</p>
-<p>I: O jogador interage com o objeto que está em cima.</p>
-</div>
+      <div class="conteudo">
+        <div class="tuto-jogo">
+          <h1>Tutorial do jogo</h1>
+        </div>
+        <div class="pix">
+          
+        </div>
+        <div id="tutorial-mov">
+          <h2>CONTROLES</h2>
+          <p>W: O jogador movimenta uma unidade para cima</p>
+          <p>A: O jogador movimenta uma unidade para esquerda</p>
+          <p>S: O jogador movimenta uma unidade para baixo</p>
+          <p>D: O jogador movimenta uma unidade para direita</p>
+          <p>I: O jogador interage com o objeto que está em cima.</p>
+        </div>
 
-<div id="tutorial-elemen">
-    <h1>ELEMENTOS</h1>
-<p>&: Símbolo que representa o jogador.</p>
-<p>*: Símbolo que representa uma parede, o jogador ao se movimentar não pode passar pela parede.</p>
-<p>@: Símbolo que representa a chave para abrir a porta para finalizar a fase, a porta abre no momento que o jogador interage com a chave.</p>
-<p>D: Símbolo que representa a porta fechada.</p>
-<p>=: Símbolo que representa a porta aberta quando o jogador interage com a chave.</p>
-<p>O: Símbolo que representa um botão que o usuário pode interagir, o botão fica no chão e o jogador deve ficar em cima dele para poder interagir.</p>
-<p>#: Símbolo que representa um espinho. A fase é reiniciada quando o jogador toca no espinho, caso a fase seja reiniciada três vezes, o jogo volta para o menu principal.</p>
-<p>>: Símbolo que representa um teletransporte. O teletransporte sempre deve vir em pares, quando o jogador toca em um ele é transportado para o outro e vice-versa.</p>
-</div>
-    </div>
+        <div id="tutorial-elemen">
+          <h2>ELEMENTOS</h2>
+          <p>&: Símbolo que representa o jogador.</p>
+          <p>
+            *: Símbolo que representa uma parede, o jogador ao se movimentar não
+            pode passar pela parede.
+          </p>
+          <p>
+            @: Símbolo que representa a chave para abrir a porta para finalizar
+            a fase, a porta abre no momento que o jogador interage com a chave.
+          </p>
+          <p>D: Símbolo que representa a porta fechada.</p>
+          <p>
+            =: Símbolo que representa a porta aberta quando o jogador interage
+            com a chave.
+          </p>
+          <p>
+            O: Símbolo que representa um botão que o usuário pode interagir, o
+            botão fica no chão e o jogador deve ficar em cima dele para poder
+            interagir.
+          </p>
+          <p>
+            #: Símbolo que representa um espinho. A fase é reiniciada quando o
+            jogador toca no espinho, caso a fase seja reiniciada três vezes, o
+            jogo volta para o menu principal.
+          </p>
+          <p>
+            >: Símbolo que representa um teletransporte. O teletransporte sempre
+            deve vir em pares, quando o jogador toca em um ele é transportado
+            para o outro e vice-versa.
+          </p>
+        </div>
+      </div>
+      
+      <div class="popup" onclick="popup()">
+        <h3>Historia</h3>
+        <span class="popuptext" id="historia"
+          >O detetive John estava em uma cidade futurística repleta de
+          mistérios. Em sua última investigação, ele se viu diante de um desafio
+          inesperado: para sair de um lugar misterioso, ele precisava enfrentar
+          três labirintos e encontrar as chaves para passar por eles. Consciente
+          dos perigos que o aguardavam, John adentrou o primeiro labirinto,
+          munido apenas de sua astúcia e intuição. À medida que John avançava
+          pelo labirinto, os espinhos afiados surgiam aleatoriamente ao seu
+          redor. Ele precisava ser ágil e cuidadoso para não ser atingido. Com
+          sua habilidade de observação   e raciocínio rápido, John desviava
+          habilmente dos espinhos enquanto procurava pela chave. Após uma busca
+          exaustiva, ele a encontrou em uma sala oculta, protegida por uma
+          armadilha engenhosa. Ao alcançar a segunda etapa do desafio, o
+          detetive notou que os espinhos eram ainda mais traiçoeiros. Além de
+          surgirem em diferentes alturas e direções, agora eles se moviam de
+          forma imprevisível. Cada passo de John era calculado com precisão,
+          enquanto seus sentidos permaneciam em alerta máximo. Com paciência e
+          determinação, ele encontrou a segunda chave, estrategicamente
+          escondida no coração do labirinto. Chegou a hora do terceiro e último
+          desafio. O detetive sabia que essa etapa seria a mais difícil, mas não
+          hesitou em seguir em frente. Os espinhos agora eram acompanhados por
+          chamas ardentes que dançavam pelo labirinto. John sabia que não
+          poderia cometer erros. Com movimentos calculados e cautela extrema,
+          ele finalmente localizou a terceira chave, protegida por uma
+          combinação complexa de obstáculos. Com as três chaves em mãos, o
+          detetive conseguiu abrir a porta que o levou de volta à cidade
+          futurística. Seu coração batia acelerado, mas a sensação de vitória
+          preenchia sua mente. John estava mais confiante e determinado do que
+          nunca, pronto para enfrentar os próximos desafios que o aguardavam em
+          sua jornada como detetive na cidade do futuro.</span
+        >
+      </div>
+      <div class="foot-p">
+        <div class="foot">
+
+        </div>
+      </div>
     </main>
-</body>
+
+    <script>
+      function popup() {
+        var popup = document.getElementById("historia");
+        popup.classList.toggle("show");
+      }
+    </script>
+  </body>
 </html>
