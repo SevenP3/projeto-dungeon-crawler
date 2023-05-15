@@ -1,0 +1,24 @@
+*{
+    margin:0;
+}
+
+.img-p{
+    width: 1000;
+    height: 1500px;
+}
+
+.img{
+    background-image: url(https://i.pinimg.com/originals/ae/66/a7/ae66a76fc2050ab30c4166909622c8d2.gif);
+    background-size: cover;
+    padding: 15px;
+    width: 1220px ;
+    height: 700px;
+    margin-top: 80px;
+    margin-left: 350px;
+}
+
+.img p{
+    font-family: 'VT323', monospace;
+    font-size: 80px;
+    color: white;
+}
