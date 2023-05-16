@@ -1,12 +1,62 @@
+body {
+  margin: 0;
+  background-color: #555;
+}
+
+#map1 {
+   border: #8a3f87;
+}
+
 table {
-   border-collapse: collapse;
-   font-size: 20px;
-   font-family: monospace;
-   text-align: center;
+  border-collapse: collapse;
+  font-size: 25px;
+  font-family: monospace;
+  text-align: center;
+  background-color: white;
+  margin-left: 480px;
+  margin-top: 45px;
+  border-radius: 25px;
+  width: 800px;
+  height: 800px;
 }
 td {
-   width: 30px;
-   height: 30px;
-   padding: 0;
-   margin: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+#player {
+  color: #8a3f87;
+  font-size: 26px;
+}
+
+tr {
+   background-color: white;
+  color: #555;
+  font-size: 25px;
+}
+
+#door {
+  color: #241714;
+}
+
+#door2 {
+  color: #241714;
+}
+
+#door3 {
+  color: #241714;
+}
+
+#key {
+  color: darkgoldenrod;
+}
+
+#key2 {
+  color: darkgoldenrod;
+}
+
+#key3 {
+  color: darkgoldenrod;
 }
