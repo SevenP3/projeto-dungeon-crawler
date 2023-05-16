@@ -4,6 +4,7 @@ let numRow = 30;
 let numCol = 30;
 
 let containerTxt = document.getElementById("container-txt");
+let spanLives = document.getElementById("lives")
 
 //table creation and wall creation
 for (let i = 0; i < numRow; i++) {
@@ -50,6 +51,13 @@ let door2Cell = tabela.rows[door2Row].cells[door2Col];
 door2Cell.innerHTML = "D";
 door2Cell.setAttribute("id", "door");
 
+
+let buttonRow = 13
+let buttonCol = 10
+let buttonCell = tabela.rows[buttonRow].cells[buttonCol]
+buttonCell.innerHTML = "O"
+buttonCell.setAttribute("id", "button")
+
 //Adding key to map
 let keyRow = 10;
 let keyCol = 14;
@@ -65,11 +73,12 @@ key2Cell.setAttribute("id", "key");
 
 //Setting location of keys and doors
 
-let countDeath = 0;
+let lives = 3;
 let pressedKey = false;
 let pressed2Key = false;
 let openedDoor = false;
 let opened2Door = false;
+
 
 //Movement Keys
 document.addEventListener("keydown", function (event) {
@@ -137,11 +146,11 @@ document.addEventListener("keydown", function (event) {
          thornCell.innerHTML = "#";
          thornCell.setAttribute("id", "thorn");
 
-         countDeath++;
+         lives--;
       }
    }
    //Defeat of the player, after reaching 3x the thorn
-   if (countDeath == 3) {
+   if (lives == 0) {
       window.open("../GAMEOVER/gameover.html", "_self");
    }
 
@@ -168,4 +177,20 @@ document.addEventListener("keydown", function (event) {
    } else if (playerCell !== door2Cell && opened2Door === true) {
       door2Cell.innerHTML = "=";
    }
+
+   if(playerCell === buttonCell && event.key === "i"){
+      let randomNumber = parseInt(Math.random()*2)+1
+      if(randomNumber === 1){
+         lives++
+      } else if(randomNumber === 2){
+         lives--
+         if (lives == 0) {
+            window.open("../GAMEOVER/gameover.html", "_self");
+         }
+   } 
+}
+if(playerCell !== buttonCell){
+   buttonCell.innerHTML = "O"
+}
+   spanLives.innerHTML = "Lives: " + lives
 });
