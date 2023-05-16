@@ -1,8 +1,21 @@
+body {
+   margin: 0;
+   background-color: #555;
+ }
+
+
+
 table {
    border-collapse: collapse;
    font-size: 20px;
    font-family: monospace;
    text-align: center;
+   background-color: white;
+  margin-left: 550px;
+  margin-top: 45px;
+  border-radius: 25px;
+  width: 800px;
+  height: 800px;
 }
 td {
    width: 30px;
@@ -13,20 +26,24 @@ td {
 
 #container-txt {
    position: absolute;
-   bottom: 320px;
+   bottom: 500px;
    left: 300px;
-   width: 354px;
+   width: 370px;
    height: 155px;
+   margin-left: 470px;
+   background-color: #555;
+   border-radius: 15px;
 }
 
 #txtFase2 {
    position: absolute;
+   text-align: center;
    top: 0px;
-   font-size: 100px;
-   border: 1px solid gray;
+   font-size: 120px;
    border-radius: 40px;
    padding: 20px;
-   color: blue;
+   color: #8a3f87;
+   font-family: 'VT323', monospace;
 }
 
 div #txt2Fase2 {
@@ -34,3 +51,35 @@ div #txt2Fase2 {
    top: 120px;
    left: 70px;
 }
+.txe{
+   color: white;
+}
+
+#door {
+   color: #241714;
+ }
+ 
+ #door2 {
+   color: #241714;
+ }
+ 
+ #door3 {
+   color: #241714;
+ }
+ 
+ #key {
+   color: darkgoldenrod;
+ }
+ 
+ #key2 {
+   color: darkgoldenrod;
+ }
+ 
+ #key3 {
+   color: darkgoldenrod;
+ }
+
+ #thorn{
+    color: #5a3226;
+ }
+ 
