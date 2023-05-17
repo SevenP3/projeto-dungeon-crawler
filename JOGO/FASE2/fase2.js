@@ -224,7 +224,7 @@ document.addEventListener("keydown", function (event) {
       }
    }
    //Defeat of the player, after reaching 3x the thorn
-   if (lives == 0) {
+   if (lives <= 0) {
       window.open("../GAMEOVER/gameover.html", "_self");
    }
 
@@ -333,7 +333,7 @@ document.addEventListener("keydown", function (event) {
          lives++;
       } else if (randomNumber === 2) {
          lives = lives - 2;
-         if (lives == 0) {
+         if (lives <= 0) {
             window.open("../GAMEOVER/gameover.html", "_self");
          }
       }
