@@ -85,9 +85,11 @@ div #txt2Fase2 {
 
 #lives{
    color: red;
-   font-size: 20px;
+   font-size: 35px;
    position: absolute;
+   font-family: 'VT323', monospace;
    top: 70px;
-   left: 450px;
+   left: 400px;
+ 
  }
  
