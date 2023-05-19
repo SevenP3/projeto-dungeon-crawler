@@ -3,22 +3,38 @@
 }
 
 .img-p{
-    width: 1000;
-    height: 1500px;
+    width: 600px;
+    height: 800px;
 }
 
 .img{
-    background-image: url(https://i.pinimg.com/originals/ae/66/a7/ae66a76fc2050ab30c4166909622c8d2.gif);
+    background-image: url(https://cdn.sanity.io/images/hpvpbfax/production/e261b661e656a59eabf809608249dca5ab7bca9f-480x600.gif);
     background-size: cover;
     padding: 15px;
-    width: 1220px ;
-    height: 700px;
-    margin-top: 80px;
-    margin-left: 350px;
+    width: 600px;
+    height: 800px;
+    justify-content: center;
+    margin-top: 200px;
 }
 
 .img p{
     font-family: 'VT323', monospace;
     font-size: 80px;
     color: white;
+}
+
+.text-agrade{
+    margin-left: 630px;
+    margin-top: -800px;
+    float: left;
+    width: 900px;
+    height: 800px;
+    color: black;
+    background-color: aqua;
+}
+
+main{
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
 }
