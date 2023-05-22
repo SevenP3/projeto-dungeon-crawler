@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo da Memória</title>
+  <style>
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 24px;
+      line-height: 100px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+    
+    .card.flipped {
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jogo da Memória</h1>
+  <div id="game-board"></div>
+  
+  <script>
+    // Array com os ícones das cartas
+    var icons = [
+      "fa-diamond",
+      "fa-paper-plane-o",
+      "fa-anchor",
+      "fa-bolt",
+      "fa-cube",
+      "fa-leaf",
+      "fa-bicycle",
+      "fa-bomb",
+      "fa-star",
+      "fa-heart",
+      "fa-music",
+      "fa-plane",
+      "fa-diamond",
+      "fa-paper-plane-o",
+      "fa-anchor",
+      "fa-bolt",
+      "fa-cube",
+      "fa-leaf",
+      "fa-bicycle",
+      "fa-bomb",
+      "fa-star",
+      "fa-heart",
+      "fa-music",
+      "fa-plane"
+    ];
+
+    // Embaralha os ícones
+    icons.sort(function() { return 0.5 - Math.random(); });
+
+    // Referência para a última carta virada
+    var lastCard = null;
+
+    // Bloqueia a interação durante a animação
+    var blockInteraction = false;
+
+    // Cria as cartas no tabuleiro
+    var gameBoard = document.getElementById("game-board");
+
+    for (var i = 0; i < icons.length; i++) {
+      var card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = '<i class="fa ' + icons[i] + '"></i>';
+      card.addEventListener("click", flipCard);
+      gameBoard.appendChild(card);
+    }
+
+    // Função para virar uma carta
+    function flipCard() {
+      if (blockInteraction) return;
+
+      if (this === lastCard) return;
+
+      this.classList.add("flipped");
+
+      if (!lastCard) {
+        // Primeira carta virada
+        lastCard = this;
+      } else {
+        // Segunda carta virada
+        blockInteraction = true;
+
+        if (this.innerHTML === lastCard.innerHTML) {
+          // As cartas são iguais
+          lastCard.removeEventListener("click", flipCard);
+          this.removeEventListener("click", flipCard);
+          lastCard = null;
+          blockInteraction = false;
+
+          if (document.querySelectorAll('.card.flipped').length === icons.length) {
+            // Todas as cartas foram viradas
+            setTimeout(function() {
+              alert("Parabéns! Você ganhou o jogo!");
+            }, 500);
+          }
+        } else {
+          // As cartas são diferentes
+          setTimeout(function() {
+            lastCard.classList.remove("flipped");
+            this.classList.remove("flipped");
+            lastCard = null;
+            blockInteraction = false;
+          }.bind(this), 1000);
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+</body>
+</html>
