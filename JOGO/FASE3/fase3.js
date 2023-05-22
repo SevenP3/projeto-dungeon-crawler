@@ -908,5 +908,8 @@ document.addEventListener("keydown", function (event) {
     if(playerCell === button2Cell && event.key === "i"){
         key6Cell.style.display = "block"
     }
+    if(playerCell===button4Cell && event.key === "i"){
+        window.open("memoria.html", "_self")
+    }
     spanLives.innerHTML = "Lives: " + lives;
 });
