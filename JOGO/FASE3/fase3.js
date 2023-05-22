@@ -426,6 +426,7 @@ let key6Col = 20;
 let key6Cell = tabela.rows[key6Row].cells[key6Col];
 key6Cell.innerHTML = "@";
 key6Cell.setAttribute("id", "key");
+key6Cell.style.display = "none"
 
 let keyFinalRow = 10;
 let keyFinalCol = 42;
@@ -549,7 +550,7 @@ document.addEventListener("keydown", function (event) {
     } else if (event.key === "a") {
         nextCol--;
     }
-    //Hiding the map phrase
+    
 
     //Collision with the wall and doors
     //Player movement
@@ -896,6 +897,16 @@ document.addEventListener("keydown", function (event) {
     }
     if (playerCell !== buttonCell) {
         buttonCell.innerHTML = "O";
+    }
+    if(playerCell === buttonCell && event.key === "i"){
+        lives=0
+        if(lives===0){
+            window.open("../GAMEOVER/gameover.html", "_self")
+        }
+    }
+
+    if(playerCell === button2Cell && event.key === "i"){
+        key6Cell.style.display = "block"
     }
     spanLives.innerHTML = "Lives: " + lives;
 });
