@@ -1,4 +1,6 @@
 let tabela = document.getElementById("map3");
+var modal = document.getElementById("myModal");
+
 
 let numRow = 60;
 let numCol = 60;
@@ -908,8 +910,74 @@ document.addEventListener("keydown", function (event) {
     if(playerCell === button2Cell && event.key === "i"){
         key6Cell.style.display = "block"
     }
-    if(playerCell===button4Cell && event.key === "i"){
-        window.open("memoria.html", "_self")
+
+
+
+    if(playerCell===button6Cell && event.key === "i"){
+     
+        modal.style.display = "block";
+
     }
+
+
     spanLives.innerHTML = "Lives: " + lives;
 });
+
+const cards = document.querySelectorAll('.memory-card');
+
+function flipCard() {
+  this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+ let hasFlippedCard = false;
+ let lockBoard = false;
+ let firstCard, secondCard;
+
+  function flipCard() {
+    if (lockBoard) return;
+
+   this.classList.toggle('flip');
+   this.classList.add('flip');
+
+   if (!hasFlippedCard) {
+     hasFlippedCard = true;
+     firstCard = this;
+     return;
+    }
+ 
+    secondCard = this;
+    hasFlippedCard = false;
+ 
+    checkForMatch();
+  }
+ 
+  function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+      disableCards();
+      return;
+    }
+ 
+    unflipCards();
+  }
+ 
+  function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+  }
+ 
+  function unflipCards() {
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+    }, 1500);
+  }
+
+  function shuffle() {
+    cards.forEach(card => {
+      let ramdomPos = Math.floor(Math.random() * 20);
+      card.style.order = ramdomPos;
+    });
+  }
