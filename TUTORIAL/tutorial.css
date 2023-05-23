@@ -21,6 +21,10 @@
   width: 890px;
 }
 
+audio {
+  display: none;
+}
+
 main {
   width: 1200px;
   height: 800px;
