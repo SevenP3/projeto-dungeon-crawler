@@ -328,10 +328,10 @@ document.addEventListener("keydown", function (event) {
    }
 
    if (playerCell === buttonCell && event.key === "i") {
-      let randomNumber = parseInt(Math.random() * 2) + 1;
-      if (randomNumber === 1) {
+      let randomNumber = parseInt(Math.random() * 500) + 1;
+      if (randomNumber < 250) {
          lives++;
-      } else if (randomNumber === 2) {
+      } else if (randomNumber >= 250) {
          lives = lives - 2;
          if (lives <= 0) {
             window.open("../GAMEOVER/gameover.html", "_self");
