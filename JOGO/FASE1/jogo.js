@@ -1,3 +1,24 @@
+if ('autoplay' in HTMLAudioElement.prototype) {
+   var backgroundMusic = document.getElementById('backgroundMusic');
+   var currentMusicIndex = localStorage.getItem('currentMusicIndex');
+   var musicList = [
+      'FNAF-Theme.mp3',
+      'FNAF-Theme.mp3'
+    ];
+   
+   if (currentMusicIndex !== null) {
+     backgroundMusic.src = musicList[currentMusicIndex];
+     backgroundMusic.play().catch(function() {
+     });
+   }
+ 
+   document.addEventListener('click', function() {
+     if (backgroundMusic.paused) {
+       backgroundMusic.play();
+     }
+   });
+ }
+
 let table = document.getElementById("map1");
 let numRows = 15;
 let numCols = 15;

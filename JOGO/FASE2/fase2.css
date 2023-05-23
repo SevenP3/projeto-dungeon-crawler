@@ -24,6 +24,10 @@ td {
    margin: 0;
 }
 
+audio {
+   display: none;
+ }
+
 #container-txt {
    position: absolute;
    bottom: 500px;

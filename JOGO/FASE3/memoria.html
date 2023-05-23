@@ -22,9 +22,16 @@
     .card.flipped {
       background-color: #999;
     }
+
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
+  <div>
+    <audio id="backgroundMusic" loop autoplay></audio>
+  </div>
   <h1>Jogo da Memória</h1>
   <div id="game-board"></div>
   
@@ -116,6 +123,56 @@
         }
       }
     }
+
+    // Verificar se o navegador suporta a reprodução de áudio
+if ('autoplay' in HTMLAudioElement.prototype) {
+    var backgroundMusic = document.getElementById('backgroundMusic');
+    var currentMusicIndex = localStorage.getItem('currentMusicIndex');
+    var musicList = [
+      // Adicione os nomes de arquivo das suas músicas aqui
+      'Mission-Impossible-Theme.mp3',
+      'Mission-Impossible-Theme.mp3'
+    ];
+ 
+    // Verificar se há uma música atualmente sendo reproduzida
+    if (currentMusicIndex !== null) {
+       backgroundMusic.src = musicList[currentMusicIndex];
+       backgroundMusic.play().catch(function() {
+         // O navegador bloqueou a reprodução automática; aguardar interação do usuário
+       });
+     }
+ 
+    // Iniciar a reprodução de áudio quando o usuário interagir com a página
+    document.addEventListener('click', function() {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+      }
+    });
+ 
+    // Pausar a reprodução quando o usuário sair da página
+    window.addEventListener('beforeunload', function() {
+      if (!backgroundMusic.paused) {
+        backgroundMusic.pause();
+ 
+        // Trocar para a próxima música
+       function changeMusic() {
+          if (currentMusicIndex === null) {
+            currentMusicIndex = 0;
+          } else {
+            currentMusicIndex = (parseInt(currentMusicIndex) + 1) % musicList.length;
+          }
+          localStorage.setItem('currentMusicIndex', currentMusicIndex);
+          backgroundMusic.src = musicList[currentMusicIndex];
+          backgroundMusic.play().catch(function() {
+            // O navegador bloqueou a reprodução automática; aguardar interação do usuário
+          });
+        }
+  
+        // Chamar a função changeMusic para trocar de música (você pode chamá-la onde for necessário)
+        changeMusic();
+      }
+    });
+  }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 </body>

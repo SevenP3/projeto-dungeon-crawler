@@ -19,6 +19,11 @@ table {
   width: 800px;
   height: 800px;
 }
+
+audio {
+  display: none;
+}
+
 td {
   width: 30px;
   height: 30px;

@@ -1,3 +1,24 @@
+if ('autoplay' in HTMLAudioElement.prototype) {
+    var backgroundMusic = document.getElementById('backgroundMusic');
+    var currentMusicIndex = localStorage.getItem('currentMusicIndex');
+    var musicList = [
+       'Mission-Impossible-Theme.mp3',
+       'Mission-Impossible-Theme.mp3'
+     ];
+    
+    if (currentMusicIndex !== null) {
+      backgroundMusic.src = musicList[currentMusicIndex];
+      backgroundMusic.play().catch(function() {
+      });
+    }
+  
+    document.addEventListener('click', function() {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+      }
+    });
+  }
+
 let tabela = document.getElementById("map3");
 var modal = document.getElementById("myModal");
 
