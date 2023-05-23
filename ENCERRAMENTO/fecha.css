@@ -11,7 +11,9 @@ main{
     margin-top: 130px;
 }
 
-
+audio {
+    display: none;
+  }
 
 .img{
     background-image: url(https://cdn.sanity.io/images/hpvpbfax/production/e261b661e656a59eabf809608249dca5ab7bca9f-480x600.gif);
