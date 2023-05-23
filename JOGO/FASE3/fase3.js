@@ -423,8 +423,8 @@ let key5Cell = tabela.rows[key5Row].cells[key5Col];
 key5Cell.innerHTML = "@";
 key5Cell.setAttribute("id", "key");
 
-let key6Row = 6;
-let key6Col = 20;
+let key6Row = 13;
+let key6Col = 25;
 let key6Cell = tabela.rows[key6Row].cells[key6Col];
 key6Cell.innerHTML = "@";
 key6Cell.setAttribute("id", "key");
@@ -574,10 +574,16 @@ document.addEventListener("keydown", function (event) {
     let thornCol = [100];
     for (let n = 0; n < thornRow.length; n++) {
         thornRow = [
-            57, 56, 56, 56, 56, 57, 57, 57, 57, 56, 55, 55, 55, 55, 55, 56, 57
+            5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,7,8,8,8,8,8,8,8,8,8,8,8,8,9,10,11,12,8,8,8,9,10,11,11,
+            11,11,11,11,11,12
+
+
         ];
         thornCol = [
-            24, 24, 25, 26, 27, 27, 28, 29, 30, 30, 30, 30, 31, 32, 33, 34, 34, 34
+            13,14,15,16,17,18,19,20,21,22,23,24,25,26,13,13,13,14,15,16,17,19,20,21,22,23,24,25,26,26,26,26,26,13,13,13,13,13,13,
+            14,15,16,17,18,19,20,21,21,22,
+
+
         ];
         let thornCell = tabela.rows[thornRow[n]].cells[thornCol[n]];
         thornCell.innerHTML = "#";
@@ -912,72 +918,119 @@ document.addEventListener("keydown", function (event) {
     }
 
 
-
-    if(playerCell===button6Cell && event.key === "i"){
-     
-        modal.style.display = "block";
-
+//engimas******************************************************************************
+if(playerCell===button6Cell && event.key === "i"){
+var perguntas = [
+    {
+      pergunta: "O que sobe e desce, mas nunca se move?",
+      resposta: "escada"
+    },
+    {
+      pergunta: "Qual é o animal mais rápido do mundo?",
+      resposta: "guepardo"
     }
-
-
+  ]; 
+  function fazerPerguntas() {
+    for (var i = 0; i < perguntas.length; i++) {
+      var respostaUsuario = prompt(perguntas[i].pergunta);
+      if (respostaUsuario.toLowerCase() !== perguntas[i].resposta.toLowerCase()) {
+        alert("Resposta incorreta! Tente novamente.");
+        i--; 
+      }
+    }
+    alert("Parabéns! Você acertou todas as perguntas!");
+  }
+  fazerPerguntas(); 
+    }
+//***************************************************************************************** */
+if(playerCell===button5Cell && event.key === "i"){
+    var perguntas = [
+        {
+          pergunta: "Quanto mais você tira, mais ele cresce. O que é",
+          resposta: "buraco"
+        },
+        {
+          pergunta: "Eu sou um instrumento através do qual os sons são feitos. No entanto, você não pode me tocar. O que eu sou?",
+          resposta: "Voz"
+        }
+      ]; 
+      function fazerPerguntas() {
+        for (var i = 0; i < perguntas.length; i++) {
+          var respostaUsuario = prompt(perguntas[i].pergunta);
+          if (respostaUsuario.toLowerCase() !== perguntas[i].resposta.toLowerCase()) {
+            alert("Resposta incorreta! Tente novamente.");
+            i--; 
+          }
+        }
+        alert("Parabéns! Você acertou todas as perguntas!");
+      }
+      fazerPerguntas(); 
+}
+//******************************************************************************************* */
+if(playerCell===button4Cell && event.key === "i"){
+    var perguntas = [
+        {
+          pergunta: "Se você me tem, quer compartilhar. Mas se me compartilhar, eu deixo de existir. O que eu sou?",
+          resposta: "segredo"
+        },
+        {
+          pergunta: "Eu posso ser um deus, um planeta, e medir o calor. O que eu sou?",
+          resposta: "mercúrio"
+        },
+        {
+            pergunta: "Eu te ajudo da cabeça aos pés. Mas quanto mais eu trabalho, menor eu pareço. O que eu sou?",
+            resposta: "sabonete"
+          },
+          {
+            pergunta: "O que o filho do matemático fala quando quer ir ao banheiro? ",
+            resposta: "pipi"
+          }
+      ]; 
+      function fazerPerguntas() {
+        for (var i = 0; i < perguntas.length; i++) {
+          var respostaUsuario = prompt(perguntas[i].pergunta);
+          if (respostaUsuario.toLowerCase() !== perguntas[i].resposta.toLowerCase()) {
+            alert("Resposta incorreta! Tente novamente.");
+            i--; 
+          }
+        }
+        alert("Parabéns! Você acertou todas as perguntas!");
+      }
+      fazerPerguntas(); 
+}
+//**************************************************************************************************** */
+if(playerCell===button3Cell && event.key === "i"){
+    var perguntas = [
+        {
+          pergunta: "Sou um objeto que pode ser usado para armazenar informações digitais. Sou plano, fino e geralmente feito de vidro ou metal.",
+          resposta: "disco rígido"
+        },
+        {
+          pergunta: "A avó dividiu 20 balas entre as duas netas. Que horas são? a) 10:02 b) 1:50 c) 20:02 d) 8:02 e) 12:50",
+          resposta: "b"
+        },
+        {
+            pergunta: "O que quanto mais curto for, mais rápido é?            ",
+            resposta: "tempo"
+          },
+          {
+            pergunta: "Imagine que você está em uma sala escura ao lado de Sherlock. Nela há um fósforo, uma lâmpada de querosene, uma vela e uma lareira. O que você acenderia primeiro?",
+            resposta: "fósforo"
+          }
+      ]; 
+      function fazerPerguntas() {
+        for (var i = 0; i < perguntas.length; i++) {
+          var respostaUsuario = prompt(perguntas[i].pergunta);
+          if (respostaUsuario.toLowerCase() !== perguntas[i].resposta.toLowerCase()) {
+            alert("Resposta incorreta! Tente novamente.");
+            i--; 
+          }
+        }
+        alert("Parabéns! Você acertou todas as perguntas!");
+      }
+      fazerPerguntas(); 
+}
+//************************************************************************************************** */
     spanLives.innerHTML = "Lives: " + lives;
 });
 
-const cards = document.querySelectorAll('.memory-card');
-
-function flipCard() {
-  this.classList.toggle('flip');
-}
-
-cards.forEach(card => card.addEventListener('click', flipCard));
-
-
- let hasFlippedCard = false;
- let lockBoard = false;
- let firstCard, secondCard;
-
-  function flipCard() {
-    if (lockBoard) return;
-
-   this.classList.toggle('flip');
-   this.classList.add('flip');
-
-   if (!hasFlippedCard) {
-     hasFlippedCard = true;
-     firstCard = this;
-     return;
-    }
- 
-    secondCard = this;
-    hasFlippedCard = false;
- 
-    checkForMatch();
-  }
- 
-  function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-      disableCards();
-      return;
-    }
- 
-    unflipCards();
-  }
- 
-  function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-  }
- 
-  function unflipCards() {
-    setTimeout(() => {
-      firstCard.classList.remove('flip');
-      secondCard.classList.remove('flip');
-    }, 1500);
-  }
-
-  function shuffle() {
-    cards.forEach(card => {
-      let ramdomPos = Math.floor(Math.random() * 20);
-      card.style.order = ramdomPos;
-    });
-  }
