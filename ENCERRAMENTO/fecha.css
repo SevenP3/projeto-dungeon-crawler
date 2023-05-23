@@ -5,11 +5,13 @@
 main{
     width: 1200px;
     height: 500px;
-    background-color: black;
+    background-color: #555;
     display: inline-flex;
     margin-left: 190px;
     margin-top: 130px;
 }
+
+
 
 .img{
     background-image: url(https://cdn.sanity.io/images/hpvpbfax/production/e261b661e656a59eabf809608249dca5ab7bca9f-480x600.gif);
@@ -17,6 +19,15 @@ main{
     width: 400px;
     height: 500px;
     justify-content: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  
+}
+
+.img:hover{
+    transform: rotateY(180deg);
+    background-image: url(https://i.pinimg.com/736x/db/fb/44/dbfb4434fc52ecdb1d434790ebf6a379.jpg);
+
 }
 
 .text-agrade{
@@ -29,14 +40,32 @@ main{
 }
 
 .dev{
-    display: block;
-    margin-top: 110px;
+    margin-top: 80px;
     padding: 12px;
-    width: 200px;
+    width: 400px;
     height: 80px;
-    font-size: 21px;
+    font-size: 25px;
+    font-family: 'VT323', monospace;
+
 }
 
 .dev h5{
-    font-size:25px ;
+    font-size:40px ;
+}
+
+.text-agrade h4{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    padding: 5px;
+
+}
+
+img{
+    float: left;
+    width: 300px;
+    height: 160px;
+    margin-left: 400px;
+    margin-top: -160px;
+    color: black;
 }
