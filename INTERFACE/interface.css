@@ -42,6 +42,10 @@
     background-color: #1e2528;
     color: white;
  }
+
+ audio {
+   display: none;
+ }
  
  button:hover {
     color: #8a3f87;
