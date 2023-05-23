@@ -705,7 +705,7 @@ document.addEventListener("keydown", function (event) {
                 }
 
                 if (playerCell === doorFinalCell) {
-                         window.open("../FASE3/fase3.html", "_self");
+                         window.open("../../ENCERRAMENTO/fechar.html", "_self");
                      }  
                 //*********************************************************** */
         
@@ -892,17 +892,7 @@ document.addEventListener("keydown", function (event) {
         portal14Cell.innerHTML = ">";
     }
 
-    if (playerCell === buttonCell && event.key === "i") {
-        let randomNumber = parseInt(Math.random() * 2) + 1;
-        if (randomNumber === 1) {
-            lives++;
-        } else if (randomNumber === 2) {
-            lives = lives - 2;
-            if (lives <= 0) {
-                window.open("../GAMEOVER/gameover.html", "_self");
-            }
-        }
-    }
+   
     if (playerCell !== buttonCell) {
         buttonCell.innerHTML = "O";
     }
